@@ -4,11 +4,11 @@
                 <table id="menuTable" class="indent">
                     <thead>
                         <tr>
-                            <th colspan="3">Paddy's Cafe Menu</th>
+                            <th colspan="3">SECRET ESCAPES Gateaways:</th>
                         </tr>
                         <tr>
                             <th>Select</th>
-                            <th>Item</th>
+                            <th>Destination</th>
                             <th>Price</th>
                         </tr>
                     </thead>
@@ -28,7 +28,7 @@
                                         <input name="item0" type="checkbox" />
                                     </td>
                                     <td>
-                                        <xsl:value-of select="item" />
+                                        <xsl:value-of select="destination" />
                                     </td>
                                     <td align="right">
                                         <xsl:value-of select="price" />
