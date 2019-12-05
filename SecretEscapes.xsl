@@ -14,7 +14,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <xsl:for-each select="/cafemenu/section">
+                        <xsl:for-each select="/gateaways/section">
                             <tr>
                                 <td colspan="4">
                                     <xsl:value-of select="@name" />
