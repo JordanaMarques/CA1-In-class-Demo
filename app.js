@@ -79,6 +79,18 @@ router.post('/post/json', function(req, res) {
 
 });
 
+router.post('/post/delete', function(req, res) {
+
+    function deleteJSON(obj) {
+        xmlFileToJs('SecretEscapes.xml', function(err, result) {
+            if (err) throw (err);
+            delete result.gateaways.section[obj.section].entree[obj.entree];
+            jsToXmlFile('SecretEscapes.xml', result, function(err) {
+                
+            })
+        })
+       }
+
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
   var addr = server.address();
   console.log("Server listening at", addr.address + ":" + addr.port);
