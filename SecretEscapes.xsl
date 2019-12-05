@@ -4,18 +4,19 @@
                 <table id="menuTable" class="indent">
                     <thead>
                         <tr>
-                            <th colspan="3">SECRET ESCAPES Gateaways:</th>
+                            <th colspan="4">SECRET ESCAPES Gateaways:</th>
                         </tr>
                         <tr>
                             <th>Select</th>
                             <th>Destination</th>
                             <th>Price</th>
+                            <th>Day</th>
                         </tr>
                     </thead>
                     <tbody>
                         <xsl:for-each select="/cafemenu/section">
                             <tr>
-                                <td colspan="3">
+                                <td colspan="4">
                                     <xsl:value-of select="@name" />
                                 </td>
                             </tr>
@@ -30,8 +31,11 @@
                                     <td>
                                         <xsl:value-of select="destination" />
                                     </td>
-                                    <td align="right">
+                                    <td>
                                         <xsl:value-of select="price" />
+                                    </td>
+                                     <td align="right">
+                                        <xsl:value-of select="day" />
                                     </td>
                                 </tr>
                             </xsl:for-each>
