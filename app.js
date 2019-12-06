@@ -86,10 +86,15 @@ router.post('/post/delete', function(req, res) {
             if (err) throw (err);
             delete result.gateaways.section[obj.section].entree[obj.entree];
             jsToXmlFile('SecretEscapes.xml', result, function(err) {
+                if (err) console.log(err);
                 
             })
         })
        }
+         deleteJSON(req.body);
+
+});
+
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
   var addr = server.address();
