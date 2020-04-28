@@ -46,5 +46,9 @@ app.listen(Constants.port, () => {
     Env: ${app.get('env')}
   `);
 });
-
+app.get ('/',(req,res)=>{
+res.send("Welcome to Secret Escapes Application");
+});
 export default app;
+
+
