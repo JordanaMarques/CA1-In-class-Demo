@@ -20,9 +20,10 @@ function select_row() {
     $(this).addClass("selected");
     const value = $(this)[0].textContent;
     const onlyValue = value.replace(/[^A-Za-z]/g, " ");
-    document.getElementById("itemV").value = onlyValue;
+    document.getElementById("destinationV").value = onlyValue;
     document.getElementById("priceV").value = value.match(/\d+/)[0];
-    var section = $(this).prevAll("tr").children("td[colspan='3']").length - 1;
+    document.getElementById("dayV").value = onlyValue;
+    var section = $(this).prevAll("tr").children("td[colspan='4']").length - 1;
     var entree = $(this).attr("id") - 1;
     delete_row(section, entree);
     update_row(section, entree, onlyValue, 20);
@@ -60,8 +61,9 @@ function update_row(sec, ent) {
             type: "POST",
             contentType: "json",
             data: {
-              item: "updated",
+              destination: "updated",
               price: 20,
+              day: "updated",
             },
           });
           draw_table();
