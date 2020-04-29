@@ -45,7 +45,7 @@ const defaultConfig = {
 const environmentConfigs = {
 	development: {
 		mongo: {
-			uri: process.env.MONGO_URI || 'mongodb://adil:adil123@ds259105.mlab.com:59105/anu'
+			uri: process.env.MONGO_URI || 'mongodb+srv://JordanaMarques:Pass123@cluster0-w4mnb.mongodb.net/test?retryWrites=true&w=majority'
 		},
 		security: {
 			saltRounds: 4
@@ -54,7 +54,7 @@ const environmentConfigs = {
 	test: {
 		port: 27017,
 		mongo: {
-			uri: process.env.MONGO_URI || 'mongodb://adil:adil123@ds259105.mlab.com:59105/anu'
+			uri: process.env.MONGO_URI || 'mongodb+srv://JordanaMarques:Pass123@cluster0-w4mnb.mongodb.net/test?retryWrites=true&w=majority'
 		},
 		security: {
 			saltRounds: 4
@@ -63,7 +63,7 @@ const environmentConfigs = {
 	production: {
 		mongo: {
 			seed: false,
-			uri: process.env.MONGO_URI || 'mongodb://adil:adil123@ds259105.mlab.com:59105/anu'
+			uri: process.env.MONGO_URI || 'mongodb+srv://JordanaMarques:Pass123@cluster0-w4mnb.mongodb.net/test?retryWrites=true&w=majority'
 		}
 	}
 };

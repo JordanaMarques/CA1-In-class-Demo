@@ -7,7 +7,7 @@ const secretSchema = new Schema({
 		type: String,
 		required: [ true, 'Service is required' ]
 	},
-	item: {
+	destination: {
 		type: String,
 		required: [ true, 'Destination  is required' ]
 	},

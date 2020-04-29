@@ -2,7 +2,7 @@ import BaseController from './base.controller';
 import SecretEscapes from '../models/SecretEscapes';
 
 class SecretEscapesController extends BaseController {
-	whitelist = [ 'service', 'item', 'price','day' ];
+	whitelist = [ 'service', 'destination', 'price','day' ];
 
 	insert = async (req, res, next) => {
 		const params = this.filterParams(req.body, this.whitelist);
